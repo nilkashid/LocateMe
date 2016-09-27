@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.nileshkashid.locateme.MyLocationActivity">
+
+    <EditText
+        android:id="@+id/enter_code_et"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/app_name"/>
+    <Button
+        android:id="@+id/start_location_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/enter_code_et"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/start_location"/>
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/time_filter"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_below="@+id/start_location_btn"
+        android:drawSelectorOnTop="true"
+        android:prompt="@string/enter_time_frame"
+        android:entries="@array/timer_filter_array"
+        >
+    </android.support.v7.widget.AppCompatSpinner>
+
+    <TextView
+        android:id="@+id/location_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_below="@+id/time_filter"
+        android:text="Hello World!" />
+</RelativeLayout>
